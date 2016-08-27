@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -325,10 +326,10 @@
             </objects>
             <point key="canvasLocation" x="1065" y="474"/>
         </scene>
-        <!--View Controller-->
+        <!--Keno View Controller-->
         <scene sceneID="AeZ-v5-5p9">
             <objects>
-                <viewController id="Vuc-4t-Zdx" sceneMemberID="viewController">
+                <viewController id="Vuc-4t-Zdx" customClass="KenoViewController" customModule="AutoLotto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Ha-dR-o1G"/>
                         <viewControllerLayoutGuide type="bottom" id="znx-UM-fuJ"/>
@@ -456,15 +457,6 @@
                                     <constraint firstAttribute="height" constant="8" id="uE2-vI-Qc6"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQC-H5-ubj" userLabel="Buttons40Thru80" customClass="KenoButtonGridView" customModule="AutoLotto" customModuleProvider="target">
-                                <rect key="frame" x="28" y="402" width="358" height="190"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="gridStartIndex">
-                                        <integer key="value" value="40"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="line_2" translatesAutoresizingMaskIntoConstraints="NO" id="MMg-st-EA7">
                                 <rect key="frame" x="57" y="172" width="300" height="8"/>
                                 <constraints>
@@ -472,6 +464,15 @@
                                     <constraint firstAttribute="width" constant="300" id="zHI-kU-PIx"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQC-H5-ubj" userLabel="Buttons40Thru80" customClass="KenoButtonGridView" customModule="AutoLotto" customModuleProvider="target">
+                                <rect key="frame" x="28" y="402" width="358" height="190"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="gridStartIndex">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -521,6 +522,10 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="gridView1" destination="fHo-uh-6Qb" id="pl4-VC-9L7"/>
+                        <outlet property="gridView2" destination="AQC-H5-ubj" id="P6x-DL-4Zx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQ0-6q-uCw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

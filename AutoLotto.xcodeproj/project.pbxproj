@@ -23,7 +23,7 @@
 		F416CCE51D7239DE0063597F /* KenoNumberButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416CCE41D7239DE0063597F /* KenoNumberButton.swift */; };
 		F416CCE91D723A170063597F /* KenoButtonGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416CCE81D723A170063597F /* KenoButtonGridView.swift */; };
 		F416CCED1D7240380063597F /* CGRect+PerfectSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416CCEC1D7240380063597F /* CGRect+PerfectSquare.swift */; };
-		F416CCF01D724C030063597F /* KenoGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416CCEF1D724C030063597F /* KenoGridViewController.swift */; };
+		F416CCF01D724C030063597F /* KenoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416CCEF1D724C030063597F /* KenoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +45,7 @@
 		F416CCE41D7239DE0063597F /* KenoNumberButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KenoNumberButton.swift; sourceTree = "<group>"; };
 		F416CCE81D723A170063597F /* KenoButtonGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KenoButtonGridView.swift; sourceTree = "<group>"; };
 		F416CCEC1D7240380063597F /* CGRect+PerfectSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+PerfectSquare.swift"; sourceTree = "<group>"; };
-		F416CCEF1D724C030063597F /* KenoGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KenoGridViewController.swift; sourceTree = "<group>"; };
+		F416CCEF1D724C030063597F /* KenoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KenoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				F416CCC21D7214880063597F /* ViewController.swift */,
-				F416CCEF1D724C030063597F /* KenoGridViewController.swift */,
+				F416CCEF1D724C030063597F /* KenoViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -222,7 +222,7 @@
 				F416CCC31D7214880063597F /* ViewController.swift in Sources */,
 				F416CCE91D723A170063597F /* KenoButtonGridView.swift in Sources */,
 				F416CCED1D7240380063597F /* CGRect+PerfectSquare.swift in Sources */,
-				F416CCF01D724C030063597F /* KenoGridViewController.swift in Sources */,
+				F416CCF01D724C030063597F /* KenoViewController.swift in Sources */,
 				F416CCC11D7214880063597F /* AppDelegate.swift in Sources */,
 				F416CCE51D7239DE0063597F /* KenoNumberButton.swift in Sources */,
 			);
@@ -376,6 +376,7 @@
 				F416CCD11D7214880063597F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

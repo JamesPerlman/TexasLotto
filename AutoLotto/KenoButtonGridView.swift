@@ -11,13 +11,17 @@ import UIKit
 
 @IBDesignable class KenoButtonGridView: UIView {
     
-    @IBInspectable var gridStartIndex:Int = 0
+    @IBInspectable var gridStartIndex:Int = 0 {
+        didSet {
+            tagButtons()
+        }
+    }
     var buttons:[KenoNumberButton] = []
     var gridDivisionSize:CGSize = CGSize(width: 40.0, height: 40.0)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.createButtonGrid()
+        createButtonGrid()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -26,17 +30,30 @@ import UIKit
     }
     
     override func prepareForInterfaceBuilder() {
-        repositionButtons()
+        refreshButtons()
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        repositionButtons()
+        refreshButtons()
     }
     
-    func repositionButtons() {
+    func refreshButtons() {
+        gridDivisionSize = CGSize(width: self.frame.size.width / 10.0, height: self.frame.size.height / 4.0)
+        tagButtons()
+        positionButtons()
+    }
+    func positionButtons() {
         for btn in buttons {
             positionButton(btn)
+        }
+    }
+    
+    func tagButtons() {
+        for i in 0..<buttons.count {
+            let btn = buttons[i]
+            btn.tag = gridStartIndex + i
+            btn.title = "\(btn.tag + 1)"
         }
     }
     func clearButtons() {
@@ -48,7 +65,6 @@ import UIKit
     
     func createButtonGrid() {
         gridDivisionSize = CGSize(width: self.frame.size.width / 10.0, height: self.frame.size.height / 4.0)
-
         clearButtons()
         
         for i in 0..<4 {
@@ -62,16 +78,12 @@ import UIKit
         let button = KenoNumberButton()
         buttons.append(button)
         addSubview(button)
-        let idx = gridStartIndex + i * 10 + j + 1
-        button.title = "\(idx)"
-        positionButton(button)
-        button.tag = idx
     }
     
     func positionButton(button:KenoNumberButton) {
-        let n = button.tag
-        let i = (n-1)/10
-        let j = (n-1)-i*10
+        let n = button.tag - gridStartIndex
+        let i = n/10
+        let j = n-i*10
         let ny = CGFloat(i)
         let nx = CGFloat(j)
         button.frame =  CGRect(origin: CGPoint(x: nx * gridDivisionSize.width, y: ny*gridDivisionSize.height), size: gridDivisionSize).perfectSquareInRect()
