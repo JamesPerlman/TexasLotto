@@ -24,6 +24,10 @@
 		F416CCE91D723A170063597F /* KenoButtonGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416CCE81D723A170063597F /* KenoButtonGridView.swift */; };
 		F416CCED1D7240380063597F /* CGRect+PerfectSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416CCEC1D7240380063597F /* CGRect+PerfectSquare.swift */; };
 		F416CCF01D724C030063597F /* KenoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416CCEF1D724C030063597F /* KenoViewController.swift */; };
+		F4D979941D72546700C5FB65 /* RangeReplaceableCollectionType+removeObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D979931D72546700C5FB65 /* RangeReplaceableCollectionType+removeObject.swift */; };
+		F4D979961D72558B00C5FB65 /* helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D979951D72558B00C5FB65 /* helpers.swift */; };
+		F4D979991D725B7D00C5FB65 /* UserWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D979981D725B7D00C5FB65 /* UserWallet.swift */; };
+		F4D9799B1D725D4100C5FB65 /* LKAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9799A1D725D4100C5FB65 /* LKAlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		F416CCE81D723A170063597F /* KenoButtonGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KenoButtonGridView.swift; sourceTree = "<group>"; };
 		F416CCEC1D7240380063597F /* CGRect+PerfectSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+PerfectSquare.swift"; sourceTree = "<group>"; };
 		F416CCEF1D724C030063597F /* KenoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KenoViewController.swift; sourceTree = "<group>"; };
+		F4D979931D72546700C5FB65 /* RangeReplaceableCollectionType+removeObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RangeReplaceableCollectionType+removeObject.swift"; sourceTree = "<group>"; };
+		F4D979951D72558B00C5FB65 /* helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = helpers.swift; sourceTree = "<group>"; };
+		F4D979981D725B7D00C5FB65 /* UserWallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserWallet.swift; sourceTree = "<group>"; };
+		F4D9799A1D725D4100C5FB65 /* LKAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKAlertController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,9 @@
 			isa = PBXGroup;
 			children = (
 				F416CCC01D7214880063597F /* AppDelegate.swift */,
+				F4D979951D72558B00C5FB65 /* helpers.swift */,
+				F4D9799C1D725D4300C5FB65 /* 3rdParty */,
+				F4D979971D725B5C00C5FB65 /* Model */,
 				F416CCE61D7239E20063597F /* View */,
 				F416CCE71D7239ED0063597F /* Controller */,
 				F416CCD21D721C710063597F /* Resources */,
@@ -136,8 +147,25 @@
 			isa = PBXGroup;
 			children = (
 				F416CCEC1D7240380063597F /* CGRect+PerfectSquare.swift */,
+				F4D979931D72546700C5FB65 /* RangeReplaceableCollectionType+removeObject.swift */,
 			);
 			name = Extension;
+			sourceTree = "<group>";
+		};
+		F4D979971D725B5C00C5FB65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F4D979981D725B7D00C5FB65 /* UserWallet.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F4D9799C1D725D4300C5FB65 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				F4D9799A1D725D4100C5FB65 /* LKAlertController.swift */,
+			);
+			name = 3rdParty;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,9 +248,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F416CCC31D7214880063597F /* ViewController.swift in Sources */,
+				F4D9799B1D725D4100C5FB65 /* LKAlertController.swift in Sources */,
 				F416CCE91D723A170063597F /* KenoButtonGridView.swift in Sources */,
 				F416CCED1D7240380063597F /* CGRect+PerfectSquare.swift in Sources */,
+				F4D979941D72546700C5FB65 /* RangeReplaceableCollectionType+removeObject.swift in Sources */,
+				F4D979991D725B7D00C5FB65 /* UserWallet.swift in Sources */,
 				F416CCF01D724C030063597F /* KenoViewController.swift in Sources */,
+				F4D979961D72558B00C5FB65 /* helpers.swift in Sources */,
 				F416CCC11D7214880063597F /* AppDelegate.swift in Sources */,
 				F416CCE51D7239DE0063597F /* KenoNumberButton.swift in Sources */,
 			);

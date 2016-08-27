@@ -414,6 +414,9 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="playGame:" destination="Vuc-4t-Zdx" eventType="touchUpInside" id="xik-Pj-ltJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="786-Sd-OPD">
                                 <rect key="frame" x="108" y="616" width="199" height="44"/>
@@ -424,6 +427,9 @@
                                 <state key="normal" title="Clear Board">
                                     <color key="titleColor" red="0.36878272249999999" green="0.0113561124" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="resetGame:" destination="Vuc-4t-Zdx" eventType="touchUpInside" id="kY9-qU-J2e"/>
+                                </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="line_2" translatesAutoresizingMaskIntoConstraints="NO" id="lOY-1s-VGN">
                                 <rect key="frame" x="57" y="600" width="300" height="8"/>
@@ -469,7 +475,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="gridStartIndex">
-                                        <integer key="value" value="10"/>
+                                        <integer key="value" value="40"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
