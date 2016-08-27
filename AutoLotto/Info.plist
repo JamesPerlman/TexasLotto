@@ -2,6 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Wendyville.ttf</string>
+		<string>Western Bang Bang.ttf</string>
+		<string>Staubach.ttf</string>
+		<string>shouldve known.ttf</string>
+		<string>GunfighterAcademy-Regular.ttf</string>
+		<string>Cowboys.ttf</string>
+		<string>Chunk.ttf</string>
+		<string>shouldve known shaded.ttf</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
