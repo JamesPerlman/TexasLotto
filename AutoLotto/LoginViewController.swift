@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var username:UITextField!
     @IBOutlet weak var password:UITextField!
     override func viewDidLoad() {
@@ -39,6 +39,15 @@ class LoginViewController: UIViewController {
     
     @IBAction func dismissKeyboard(sender: AnyObject?) {
         view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == username {
+            password.becomeFirstResponder()
+        } else {
+            login(password)
+        }
+        return true
     }
 
 }
