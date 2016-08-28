@@ -151,6 +151,7 @@ class KenoViewController: UIViewController {
         setButtonsEnabled(true)
         clearButton.setTitle("Clear Board", forState: .Normal)
         bottomLabel.text = "Pick ten numbers to play."
+        hideBottomButton()
     }
     
     func setButtonsEnabled(enabled: Bool) {

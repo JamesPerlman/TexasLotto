@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(false, animated: true)
-        navigationItem.leftBarButtonItem = nil
+        navigationItem.hidesBackButton = true
         navigationController?.navigationBar.barStyle = .BlackTranslucent
     }
     
