@@ -8,14 +8,21 @@
 
 import UIKit
 
-let KenoWinbackPercent:Float = 0.10
+let KenoWinbackPercent:Float = 0.50
 
 class KenoViewController: UIViewController {
-    @IBOutlet var gridView1:KenoButtonGridView!
-    @IBOutlet var gridView2:KenoButtonGridView!
+    @IBOutlet weak var bottomButtonSpace:NSLayoutConstraint!
+    @IBOutlet weak var bottomButton:UIButton!
+    @IBOutlet weak var clearButton:UIButton!
+    @IBOutlet weak var bottomLabel:UILabel!
+    @IBOutlet weak var betLabel:UILabel!
+    @IBOutlet weak var slider:JPStylizedSlider!
+    @IBOutlet weak var gridView1:KenoButtonGridView!
+    @IBOutlet weak var gridView2:KenoButtonGridView!
+    
     var allButtons = [KenoNumberButton]()
     var selectedButtons = [KenoNumberButton]()
-    var betAmount:Float = 1.0
+    var betAmount:Float = 50.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +31,10 @@ class KenoViewController: UIViewController {
         allButtons.appendContentsOf(gridView1.buttons)
         allButtons.appendContentsOf(gridView2.buttons)
         connectButtons()
+        
+        bottomButtonSpace.constant = -60
+        view.layoutIfNeeded()
+        
     }
     
     func connectButtons() {
@@ -32,20 +43,67 @@ class KenoViewController: UIViewController {
         }
     }
     
+    func updateAmountLabel() {
+        if UserWallet.money == 0 {
+            
+        } else {
+            bottomLabel.text = "You have \(UserWallet.getUSDFormat()) left."
+        }
+    }
+    
+    
     @objc func didTouchButton(sender: KenoNumberButton) {
         if sender.selected { // button already selected.
             // deselect it, remove it from selected list
             sender.selected = false
             selectedButtons.removeObject(sender)
+            
+            
         } else {
             if selectedButtons.count < 10 {
                 sender.selected = true
                 selectedButtons.append(sender)
             }
         }
+        
+        // hide the play button if necessary
+        if selectedButtons.count == 10 {
+            showBottomButton()
+        } else {
+            hideBottomButton()
+        }
+    }
+    func hideBottomButton() {
+        if bottomButtonSpace.constant == 0 {
+            UIView.animateWithDuration(0.3) { [weak self] in
+                self?.bottomButtonSpace.constant = -60
+                self?.view.layoutIfNeeded()
+            }
+        }
     }
     
-    @IBAction func playGame(sender: AnyObject) {
+    func showBottomButton() {
+        if bottomButtonSpace.constant == -60 {
+            UIView.animateWithDuration(0.3) { [weak self] in
+                self?.bottomButtonSpace.constant = 0
+                self?.view.layoutIfNeeded()
+            }
+        }
+    }
+    
+    @IBAction func sliderDidChange(sender: JPStylizedSlider) {
+        betAmount = sender.value
+        betLabel.text = String(format: "$%.0f", betAmount)
+    }
+    
+    @IBAction func playGame(sender: UIButton) {
+        
+        guard selectedButtons.count == 10 else { return }
+        guard UserWallet.money > betAmount else {
+            let betFormat = String(format: "$%.2f", betAmount)
+            Alert(title: "Uh-oh!", message: "You can't make a \(betFormat) bet when you've only got \(UserWallet.getUSDFormat()) to spare! Head back to the main menu to add more cash.").showOkay()
+            return
+        }
         
         // unmatch all buttons
         for btn in allButtons {
@@ -66,6 +124,9 @@ class KenoViewController: UIViewController {
         }
         
         processPayment(bet: betAmount, payout: payout)
+        updateAmountLabel()
+        hideBottomButton()
+        clearButton.setTitle("Play Again", forState: .Normal)
         
     }
     
@@ -75,9 +136,9 @@ class KenoViewController: UIViewController {
         let absNet = fabsf(payout-bet)
         let netFormat = String(format: "$%.2f", absNet)
         if (payout > bet) {
-            Alert(title: "Congratulations!", message: "You won \(netFormat)!").showOkay()
+            Alert(title: "Congratulations!", message: "You won \(netFormat)! \(RandomMessageGenerator.messageWithTheme(TexasTalk.Congrats))").showOkay()
         } else {
-            Alert(title: "So sorry!", message: "You lost \(netFormat).  Better luck next time!").showOkay()
+            Alert(title: "So sorry!", message: "You lost \(netFormat). \(RandomMessageGenerator.messageWithTheme(TexasTalk.Sorry)) Try again!").showOkay()
         }
     }
     
@@ -85,6 +146,8 @@ class KenoViewController: UIViewController {
         selectedButtons.removeAll()
         resetButtons()
         setButtonsEnabled(true)
+        clearButton.setTitle("Clear Board", forState: .Normal)
+        bottomLabel.text = "Pick ten numbers to play."
     }
     
     func setButtonsEnabled(enabled: Bool) {

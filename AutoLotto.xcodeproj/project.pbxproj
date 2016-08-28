@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F416CCC11D7214880063597F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416CCC01D7214880063597F /* AppDelegate.swift */; };
-		F416CCC31D7214880063597F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416CCC21D7214880063597F /* ViewController.swift */; };
+		F416CCC31D7214880063597F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416CCC21D7214880063597F /* LoginViewController.swift */; };
 		F416CCC61D7214880063597F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F416CCC41D7214880063597F /* Main.storyboard */; };
 		F416CCC81D7214880063597F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F416CCC71D7214880063597F /* Assets.xcassets */; };
 		F416CCCB1D7214880063597F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F416CCC91D7214880063597F /* LaunchScreen.storyboard */; };
@@ -28,12 +28,16 @@
 		F4D979961D72558B00C5FB65 /* helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D979951D72558B00C5FB65 /* helpers.swift */; };
 		F4D979991D725B7D00C5FB65 /* UserWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D979981D725B7D00C5FB65 /* UserWallet.swift */; };
 		F4D9799B1D725D4100C5FB65 /* LKAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9799A1D725D4100C5FB65 /* LKAlertController.swift */; };
+		F4D9799E1D72C2B300C5FB65 /* JPStylizedSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9799D1D72C2B300C5FB65 /* JPStylizedSlider.swift */; };
+		F4D979A01D72C81D00C5FB65 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D9799F1D72C81D00C5FB65 /* HomeViewController.swift */; };
+		F4D979A51D72CBFD00C5FB65 /* JPKeyboardSensitiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D979A41D72CBFD00C5FB65 /* JPKeyboardSensitiveView.m */; };
+		F4D979A71D72CECE00C5FB65 /* RandomMessageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D979A61D72CECE00C5FB65 /* RandomMessageGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F416CCBD1D7214880063597F /* AutoLotto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLotto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F416CCC01D7214880063597F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F416CCC21D7214880063597F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F416CCC21D7214880063597F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F416CCC51D7214880063597F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F416CCC71D7214880063597F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F416CCCA1D7214880063597F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +58,12 @@
 		F4D979951D72558B00C5FB65 /* helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = helpers.swift; sourceTree = "<group>"; };
 		F4D979981D725B7D00C5FB65 /* UserWallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserWallet.swift; sourceTree = "<group>"; };
 		F4D9799A1D725D4100C5FB65 /* LKAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKAlertController.swift; sourceTree = "<group>"; };
+		F4D9799D1D72C2B300C5FB65 /* JPStylizedSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPStylizedSlider.swift; sourceTree = "<group>"; };
+		F4D9799F1D72C81D00C5FB65 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F4D979A21D72CBFD00C5FB65 /* AutoLotto-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AutoLotto-Bridging-Header.h"; sourceTree = "<group>"; };
+		F4D979A31D72CBFD00C5FB65 /* JPKeyboardSensitiveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPKeyboardSensitiveView.h; sourceTree = "<group>"; };
+		F4D979A41D72CBFD00C5FB65 /* JPKeyboardSensitiveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPKeyboardSensitiveView.m; sourceTree = "<group>"; };
+		F4D979A61D72CECE00C5FB65 /* RandomMessageGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomMessageGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +138,10 @@
 		F416CCE61D7239E20063597F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F4D979A11D72CBF400C5FB65 /* JPKeyboardSensitiveView */,
 				F416CCE41D7239DE0063597F /* KenoNumberButton.swift */,
 				F416CCE81D723A170063597F /* KenoButtonGridView.swift */,
+				F4D9799D1D72C2B300C5FB65 /* JPStylizedSlider.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -137,8 +149,9 @@
 		F416CCE71D7239ED0063597F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F416CCC21D7214880063597F /* ViewController.swift */,
+				F416CCC21D7214880063597F /* LoginViewController.swift */,
 				F416CCEF1D724C030063597F /* KenoViewController.swift */,
+				F4D9799F1D72C81D00C5FB65 /* HomeViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -155,6 +168,7 @@
 		F4D979971D725B5C00C5FB65 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F4D979A61D72CECE00C5FB65 /* RandomMessageGenerator.swift */,
 				F4D979981D725B7D00C5FB65 /* UserWallet.swift */,
 			);
 			name = Model;
@@ -166,6 +180,16 @@
 				F4D9799A1D725D4100C5FB65 /* LKAlertController.swift */,
 			);
 			name = 3rdParty;
+			sourceTree = "<group>";
+		};
+		F4D979A11D72CBF400C5FB65 /* JPKeyboardSensitiveView */ = {
+			isa = PBXGroup;
+			children = (
+				F4D979A31D72CBFD00C5FB65 /* JPKeyboardSensitiveView.h */,
+				F4D979A41D72CBFD00C5FB65 /* JPKeyboardSensitiveView.m */,
+				F4D979A21D72CBFD00C5FB65 /* AutoLotto-Bridging-Header.h */,
+			);
+			name = JPKeyboardSensitiveView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,16 +271,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F416CCC31D7214880063597F /* ViewController.swift in Sources */,
+				F416CCC31D7214880063597F /* LoginViewController.swift in Sources */,
 				F4D9799B1D725D4100C5FB65 /* LKAlertController.swift in Sources */,
 				F416CCE91D723A170063597F /* KenoButtonGridView.swift in Sources */,
 				F416CCED1D7240380063597F /* CGRect+PerfectSquare.swift in Sources */,
 				F4D979941D72546700C5FB65 /* RangeReplaceableCollectionType+removeObject.swift in Sources */,
 				F4D979991D725B7D00C5FB65 /* UserWallet.swift in Sources */,
 				F416CCF01D724C030063597F /* KenoViewController.swift in Sources */,
+				F4D9799E1D72C2B300C5FB65 /* JPStylizedSlider.swift in Sources */,
 				F4D979961D72558B00C5FB65 /* helpers.swift in Sources */,
+				F4D979A51D72CBFD00C5FB65 /* JPKeyboardSensitiveView.m in Sources */,
+				F4D979A71D72CECE00C5FB65 /* RandomMessageGenerator.swift in Sources */,
 				F416CCC11D7214880063597F /* AppDelegate.swift in Sources */,
 				F416CCE51D7239DE0063597F /* KenoNumberButton.swift in Sources */,
+				F4D979A01D72C81D00C5FB65 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,10 +399,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AutoLotto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jperl.AutoLotto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AutoLotto/AutoLotto-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -382,10 +413,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AutoLotto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jperl.AutoLotto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AutoLotto/AutoLotto-Bridging-Header.h";
 			};
 			name = Release;
 		};

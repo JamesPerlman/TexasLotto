@@ -9,9 +9,6 @@
 import UIKit
 
 class KenoNumberButton: UIButton {
-    struct Colors {
-        
-    }
     
     var title:String = "X" {
         didSet {

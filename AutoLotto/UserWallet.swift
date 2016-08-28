@@ -12,22 +12,31 @@ class UserWallet {
     static let sharedInstance = UserWallet()
     private var money:Float = 500.0
     
+    class var money:Float {
+        get {
+            return sharedInstance.money
+        }
+    }
+    
     class func addMoney(amount: Float) {
-        self.sharedInstance.money += amount
+        sharedInstance.money += amount
     }
     
     class func removeMoney(amount: Float) {
-        self.sharedInstance.money -= amount
+        sharedInstance.money -= amount
+        if money < 0 {
+            sharedInstance.money = 0
+        }
     }
     
     class func getChange() -> String {
-        return String(format: "%.0f", self.sharedInstance.money * 100)
+        return String(format: "%02.0f", (sharedInstance.money - floorf(sharedInstance.money))  * 100.0)
     }
     class func getDollars() -> String {
-        return String(format: "%.0f", self.sharedInstance.money)
+        return String(format: "%.0f", sharedInstance.money)
     }
     
     class func getUSDFormat() -> String {
-        return String(format: "%.2f", self.sharedInstance.money)
+        return String(format: "$%.2f", sharedInstance.money)
     }
 }

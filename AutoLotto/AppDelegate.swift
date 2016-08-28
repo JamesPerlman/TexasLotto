@@ -16,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // stylize Navigation Bar and Status Bar appearance
+        UINavigationBar.appearance().setBackgroundImage(UIImage(named: "leather_top_bar_short"), forBarMetrics: .Default)
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        if let font = UIFont(name: "GunfighterAcademy-Regular", size: 16.0) {
+            let attribs = [NSFontAttributeName : font]
+            UINavigationBar.appearance().titleTextAttributes = attribs
+            UIBarButtonItem.appearance().setTitleTextAttributes(attribs, forState: .Normal)
+        }
         return true
     }
 
