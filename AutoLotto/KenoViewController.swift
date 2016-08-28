@@ -92,7 +92,7 @@ class KenoViewController: UIViewController {
     }
     
     @IBAction func sliderDidChange(sender: JPStylizedSlider) {
-        betAmount = sender.value
+        betAmount = roundf(sender.value)
         betLabel.text = String(format: "$%.0f", betAmount)
     }
     
