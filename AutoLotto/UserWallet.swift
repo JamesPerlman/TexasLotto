@@ -28,6 +28,9 @@ class UserWallet {
             sharedInstance.money = 0
         }
     }
+    class func reset() {
+        sharedInstance.money = 500
+    }
     
     class func getChange() -> String {
         return String(format: "%02.0f", (sharedInstance.money - floorf(sharedInstance.money))  * 100.0)

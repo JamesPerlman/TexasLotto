@@ -29,8 +29,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func login(sender: AnyObject?) {
         if username.text?.characters.count > 0 && password.text?.characters.count > 0 {
-            performSegueWithIdentifier("home", sender: self)
+            UserWallet.reset()
             dismissKeyboard(nil)
+            performSegueWithIdentifier("home", sender: self)
         } else {
             Alert(message: "Please enter a username and password.").showOkay()
         }
