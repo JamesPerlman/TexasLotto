@@ -22,7 +22,7 @@ class KenoViewController: UIViewController {
     
     var allButtons = [KenoNumberButton]()
     var selectedButtons = [KenoNumberButton]()
-    var betAmount:Float = 50.0
+    var betAmount:Float = 25.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
