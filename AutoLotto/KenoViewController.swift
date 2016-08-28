@@ -135,8 +135,11 @@ class KenoViewController: UIViewController {
         UserWallet.removeMoney(bet)
         let absNet = fabsf(payout-bet)
         let netFormat = String(format: "$%.2f", absNet)
-        if (payout > bet) {
+        
+        if payout > bet {
             Alert(title: "Congratulations!", message: "You won \(netFormat)! \(RandomMessageGenerator.messageWithTheme(TexasTalk.Congrats))").showOkay()
+        } else if payout == bet {
+            Alert(title: "Alright!", message: "Well, you broke even.  How's about one more?").showOkay()
         } else {
             Alert(title: "So sorry!", message: "You lost \(netFormat). \(RandomMessageGenerator.messageWithTheme(TexasTalk.Sorry)) Try again!").showOkay()
         }
