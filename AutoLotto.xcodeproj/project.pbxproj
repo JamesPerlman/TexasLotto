@@ -35,7 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F416CCBD1D7214880063597F /* AutoLotto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLotto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F416CCBD1D7214880063597F /* TexasLotto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TexasLotto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F416CCC01D7214880063597F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F416CCC21D7214880063597F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F416CCC51D7214880063597F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 		F416CCBE1D7214880063597F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F416CCBD1D7214880063597F /* AutoLotto.app */,
+				F416CCBD1D7214880063597F /* TexasLotto.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -209,7 +209,7 @@
 			);
 			name = AutoLotto;
 			productName = AutoLotto;
-			productReference = F416CCBD1D7214880063597F /* AutoLotto.app */;
+			productReference = F416CCBD1D7214880063597F /* TexasLotto.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -402,8 +402,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AutoLotto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jperl.AutoLotto;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = jperl.TexasLotto;
+				PRODUCT_NAME = TexasLotto;
 				SWIFT_OBJC_BRIDGING_HEADER = "AutoLotto/AutoLotto-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -417,8 +417,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AutoLotto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jperl.AutoLotto;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = jperl.TexasLotto;
+				PRODUCT_NAME = TexasLotto;
 				SWIFT_OBJC_BRIDGING_HEADER = "AutoLotto/AutoLotto-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
