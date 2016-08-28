@@ -8,7 +8,7 @@
 
 import UIKit
 
-let KenoWinbackPercent:Float = 0.50
+let KenoWinbackPercent:Float = 0.20
 
 class KenoViewController: UIViewController {
     @IBOutlet weak var bottomButtonSpace:NSLayoutConstraint!
