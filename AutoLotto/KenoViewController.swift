@@ -99,7 +99,7 @@ class KenoViewController: UIViewController {
     @IBAction func playGame(sender: UIButton) {
         
         guard selectedButtons.count == 10 else { return }
-        guard UserWallet.money > betAmount else {
+        guard UserWallet.money >= betAmount else {
             let betFormat = String(format: "$%.2f", betAmount)
             Alert(title: "Uh-oh!", message: "You can't make a \(betFormat) bet when you've only got \(UserWallet.getUSDFormat()) to spare! Head back to the main menu to add more cash.").showOkay()
             return
